@@ -26,6 +26,11 @@
     "url": "https://github.com/oh2th-homey/fi.oh2th.homey-helpers/issues"
   },
   "homepage": "https://github.com/oh2th-homey/fi.oh2th.homey-helpers#readme",
+  "funding": [
+    "https://github.com/sponsors/oh2th",
+    "https://ko-fi.com/oh2th",
+    "https://paypal.me/oh2th"
+  ],
   "engines": {
     "node": ">=18"
   },
