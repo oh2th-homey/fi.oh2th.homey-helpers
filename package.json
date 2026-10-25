@@ -1,0 +1,36 @@
+{
+  "name": "oh2th-homey-helpers",
+  "version": "0.1.0",
+  "description": "Shared helpers for Homey Apps SDK v3 apps: Homey timers, one app-wide minute interval, capability sync and setValue with change triggers",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib/"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
+  },
+  "keywords": [
+    "homey",
+    "homey-app",
+    "sdk3"
+  ],
+  "author": "Tapio Heiskanen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oh2th-homey/fi.oh2th.homey-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oh2th-homey/fi.oh2th.homey-helpers/issues"
+  },
+  "homepage": "https://github.com/oh2th-homey/fi.oh2th.homey-helpers#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-athom": "^3.1.3"
+  }
+}
