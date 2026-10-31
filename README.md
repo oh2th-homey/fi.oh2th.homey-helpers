@@ -57,8 +57,10 @@ async onUninit() {
 - `updateCapabilities(ctx, driverCapabilities, deviceCapabilities, delay = 500)`
 - `setValue(ctx, key, value, firstRun = false, delay = 10)`: sets the value if the device has
   the capability. When the value changed and `firstRun` is false, fires the device trigger
-  `<key>_changed` (dots as underscores) for `is_*` booleans and `num_*` numbers, if that trigger
-  exists in the app manifest, with token `{ <key>: value }`. Returns `true` when changed.
+  `<key>_changed` (dots as underscores) for `is_*` booleans, if that trigger exists in the app
+  manifest, with token `{ <key>: value }`. Returns `true` when changed. Homey itself runs
+  `<key>_changed` for custom number, enum and string capabilities (and `<key>_true` /
+  `<key>_false` for booleans), so don't fire those from the app too: flows would run twice.
 
 Typical device wrapper:
 

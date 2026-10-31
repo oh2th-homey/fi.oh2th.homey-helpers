@@ -67,6 +67,12 @@ test('setValue fires is_ trigger only on change and not on first run', async () 
   assert.deepStrictEqual(ctx.homey.fired, [{ id: 'is_on_changed', tokens: { is_on: false } }]);
 });
 
+test('setValue leaves num_ triggers to Homey', async () => {
+  const ctx = fakeDevice({ num_count: 1 }, ['num_count_changed']);
+  assert.strictEqual(await setValue(ctx, 'num_count', 2, false, 0), true);
+  assert.strictEqual(ctx.homey.fired.length, 0);
+});
+
 test('setValue ignores missing capability and non-trigger keys', async () => {
   const ctx = fakeDevice({ measure_temperature: 20 }, ['measure_temperature_changed']);
   assert.strictEqual(await setValue(ctx, 'nope', 1, false, 0), false);
