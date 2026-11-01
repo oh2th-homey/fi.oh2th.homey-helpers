@@ -84,6 +84,7 @@ Days in a time zone (pure, pass `ctx.homey.clock.getTimezone()`), safe on daylig
 - `localDate(timeZone, ms)` → `'YYYY-MM-DD'`; `addDays(date, n)` → `'YYYY-MM-DD'`.
 - `midnight(timeZone, date)`: local midnight as an instant (ms). A local day runs from
   `midnight(date)` to `midnight(addDays(date, 1))`: 23 or 25 hours on daylight saving days.
+  Where the clocks jump forward at 00:00 (e.g. America/Santiago) the day starts at the jump.
 - `utcOffset(timeZone, ms)`: the zone's UTC offset in ms at that instant.
 
 ### Temperature units
